@@ -9,6 +9,17 @@
 %----> Comit All to Git Repository --> save all your changes in the local Git FOLDER
 %ENTER A COMMENT: type what you did
 
+%% Fetch from the server.
+% First commit
+% Right click onthe "Current Folder" window
+%-> Source control
+%----> Comit All to Git Repository --> save all your changes in the local Git FOLDER
+% Right click onthe "Current Folder" window
+%-> Source control
+%----> Manage Brances
+%-------> Select in "Branches" the /refs/.../master branch
+%-------> Click on merge.
+
 %% Push something to the server.
 % Right click onthe "Current Folder" window
 %-> Source control
