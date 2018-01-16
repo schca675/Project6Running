@@ -4,12 +4,12 @@ format long e
 
 g = 9.81;
 l = 1;
-steps = 100; % Walking steps, physically.
+steps = 10; % Walking steps, physically.
 angleinitdegree = -21; % starting angle
 angleenddegree = 18; % when our angle passes this angle we pass from one leg to the other
 angleinit = (angleinitdegree/180)*pi;
 angleend = (angleenddegree/180)*pi;
-angle_init_velocity = 0; % Initial angle velocity.
+angle_init_velocity = 5; % Initial angle velocity.
 
 % Walking, angle against time: x = theta
 % Differential equations:
@@ -19,7 +19,7 @@ f = @(t,x) [x(2); g*sin(x(1))/l];
 tspan = [0 10];
 
 % Initial state
-x0 = [angleinit;angle_init_velocity];
+x0 = [angleinit; 10];
 x_cord = [];
 y_cord = [];
 xfinal=0;

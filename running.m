@@ -28,7 +28,7 @@ ttot = [];
 
 % Determine t, x(t)
  for i = 1:steps
-    [t,x] = ode45(f, tspan, x0);
+    [t,x] = ode45(f, tspan, x0)
     for j = 1:length(t)
         x_cordinterm = [x_cordinterm; xfinal-(-x(j,2)*sin(x(j,1))+x(j,2)*sin(x(1,1)))];
         y_cordinterm = [y_cordinterm; yfinal+(x(j,2)*cos(x(j,1))-x(j,2)*cos(x(1,1)))];
@@ -39,7 +39,7 @@ ttot = [];
         floating = [floating (y_cordinterm(j) > x(j,2)*cos(x(j,1)))];
     end
     newtindex = min(find(floating==1));
-    if ~isempty(newt)
+    if ~isempty(newtindex)
         newtspan = [0 t(newtindex)];
         [t,x] = ode45(f,newtspan,x0);
         floating = [];
@@ -53,6 +53,7 @@ ttot = [];
             ttot = [t(1:newtindex-1)];
         end
         for j = 1:(newtindex-1)
+        end
     end
 %     if ~isempty(newx)
 %         newtspan = [0 t(newx)];
